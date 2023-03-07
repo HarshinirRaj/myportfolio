@@ -103,7 +103,9 @@ textarea {
   word-break: break-all;
 }
 
-
+.contact .container {
+  width: 50%;
+}
 
 
 /*-----------------------------------*\
@@ -113,6 +115,12 @@ textarea {
 /**
  * responsive for large than 768px screen
  */
+
+ @media (max-width: 767px) {
+  .contact .container {
+    width: auto;
+  }
+ }
 
 @media (min-width: 768px) {
 

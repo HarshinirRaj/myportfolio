@@ -106,6 +106,12 @@
  * responsive for large than 768px screen
  */
 
+ @media (max-width: 767px) {
+  .skill-content {
+    padding-top: 37px;
+  }
+ }
+
 @media (min-width: 768px) {
 
   .service-list { grid-template-columns: 1fr 1fr; }

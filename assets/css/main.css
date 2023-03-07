@@ -62,7 +62,8 @@
   padding-block-start: calc(var(--section-padding) + 60px);
   text-align: center;
   overflow: hidden;
-  margin-top: -3%
+  margin-top: -3%;
+  /* background-color: rgb(71 247 230 / 29%);; */
 }
 
 .hero::after {
@@ -72,7 +73,7 @@
   bottom: 5%;
   left: 0%;
   right: -23%;
-  background-color: rgb(71 247 230 / 29%);
+  /* background-color: rgb(71 247 230 / 29%); */
   z-index: -1;
 }
 

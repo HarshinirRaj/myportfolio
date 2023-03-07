@@ -131,6 +131,11 @@
  * responsive for large than 768px screen
  */
 
+ @media (max-width: 767px) {
+  .portfolio-list {
+    grid-template-columns: 1fr;
+  }
+ }
 @media (min-width: 768px) {
 
   .portfolio-card {
