@@ -37,7 +37,7 @@
   #SERVICES
 \*-----------------------------------*/
 
-.service { padding-block-start: calc(var(--section-padding) + 60px); }
+.service { padding-block-start: calc(var(--section-padding) + 10px); }
 
 .service-list {
   display: grid;
@@ -51,11 +51,51 @@
 .card .body-sm { color: var(--jet); }
 
 .service-list > li > .card {
-  border-radius: 150px;
+  /* border-radius: 150px; */
 }
 .service-list > li > .card > .card-media {
   border-radius: 30px;
 }
+
+
+/*-----------------------------------*\
+  #SKILLS
+\*-----------------------------------*/
+
+.skill { padding-block-end: 0; }
+
+.skill-banner {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.skill .container,
+.skill-list { display: grid; }
+
+.skill .container { gap: 50px;
+  background-color: #ffce0059;
+  padding-bottom: 2%;
+  padding-top: 2%;
+ }
+
+.skill-list {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skill .card ion-icon { font-size: 3rem; }
+
+.skill .card .card-title {
+  color: var(--jet);
+  font-size: 1.6rem;
+  font-weight: var(--fw-500);
+}
+
+.skill-list {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 
 
 /*-----------------------------------*\
@@ -68,6 +108,62 @@
 
 @media (min-width: 768px) {
 
-  .service-list { grid-template-columns: 1fr; }
+  .service-list { grid-template-columns: 1fr 1fr; }
 
 }
+/**
+ * responsive for large than 992px screen
+ */
+
+ @media (min-width: 992px) {
+
+  /**
+   * SKILL
+   */
+
+  :is(.skill) .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .skill .container { align-items: flex-start; }
+
+}
+
+
+  /**
+   * responsive for large than 1200px screen
+   */
+  
+  @media (min-width: 1200px) {
+  
+    /**
+     * ABOUT
+     */
+  
+    .about-list { gap: 40px; }
+  
+  }
+  
+  /* .skill-list > li > .card {
+    border-radius: 50px;
+  } */
+  .skill-list > li > .card > .card-media {
+    border-radius: 30px;
+  }
+  
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .skill-list > li > .card {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  

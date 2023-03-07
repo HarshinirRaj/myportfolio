@@ -49,17 +49,6 @@
 
 .header.active { background-color: var(--white); }
 
-/* .name-logo img {
-  float: left;
-  width: 100px;
-  height: 50px;
-}
-
-.name-logo h1 {
-  position: relative;
-  top: 18px;
-  left: 10px;
-} */
 
 
 
@@ -73,18 +62,17 @@
   padding-block-start: calc(var(--section-padding) + 60px);
   text-align: center;
   overflow: hidden;
+  margin-top: -3%
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 20%;
-  bottom: 60%;
-  right: -75%;
-  background-color: rgb(247 71 71 / 41%);
-  transform: rotate(0);
-  border-radius: 15px;
+  top: 26%;
+  bottom: 5%;
+  left: 0%;
+  right: -23%;
+  background-color: rgb(71 247 230 / 29%);
   z-index: -1;
 }
 
@@ -169,31 +157,6 @@
 
 
 
-
-
-/*-----------------------------------*\
-  #SKILLS
-\*-----------------------------------*/
-
-.skill { padding-block-end: 0; }
-
-.skill .container,
-.skill-list { display: grid; }
-
-.skill .container { gap: 50px; }
-
-.skill-list {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.skill .card ion-icon { font-size: 3rem; }
-
-.skill .card .card-title {
-  color: var(--jet);
-  font-size: 1.6rem;
-  font-weight: var(--fw-500);
-}
 
 
 
@@ -331,22 +294,11 @@
 
   .hero-text { --fs-18: 2rem; }
 
-  .hero::after {
-    top: 26%;
-    bottom: 5%;
-    left: 6%;
-    right: -23%;
-  }
-
-
-
   /**
    * CLIENT
    */
 
   .client .slider-item { min-width: calc(25% - 22.5px); }
-
-
 
   /**
    * TESTIMONIALS
@@ -370,15 +322,11 @@
    * HERO, ABOUT, SKILL
    */
 
-  :is(.hero, .about, .skill) .container {
+  :is(.hero, .about) .container {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
-  :is(.skill) .container {
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
 
   /**
    * HERO
@@ -395,14 +343,6 @@
    */
 
   .client .slider-item { min-width: calc(20% - 24px); }
-
-
-
-  /**
-   * SKILL
-   */
-
-  .skill .container { align-items: flex-start; }
 
 }
 
@@ -424,24 +364,3 @@
 
 }
 
-.skill-list > li > .card {
-  border-radius: 50px;
-}
-.skill-list > li > .card > .card-media {
-  border-radius: 30px;
-}
-
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.skill-list > li > .card {  
-  /* This section calls the slideInFromLeft animation we defined above */
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}

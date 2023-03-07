@@ -36,16 +36,17 @@
 \*-----------------------------------*/
 
 .portfolio {
-  background-color: var(--maximum-yellow-red_a10);
+  background-color: white;
   padding-block-start: calc(var(--section-padding) + 60px);
 }
 
 .portfolio-list,
 .portfolio-card { display: grid; }
 
-.portfolio-list { gap: 50px; }
+.portfolio-list { gap: 30px;
+  grid-template-columns: 1fr 1fr;}
 
-.portfolio-card { gap: 25px; }
+/* .portfolio-card { gap: 25px; }
 
 .portfolio-card .card-banner {
   position: relative;
@@ -89,9 +90,36 @@
   margin-block-end: 18px;
 }
 
-.portfolio-card .card-text { margin-block: 10px 25px; }
+.portfolio-card .card-text { margin-block: 10px 25px; } */
 
 
+.client-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  /* max-width: 500px; */
+  background-color: transparent;
+  padding : 2%;
+  margin : 0%;
+  opacity : 0.8;
+  min-height: 310px;
+}
+
+
+
+/* On mouse-over, add a deeper shadow */
+.client-card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  opacity: 1;
+  height: 100%;
+  background-color: hsl(73deg 73% 61% / 34%);
+  position: relative;
+}
+
+/* Add some padding inside the card container */
+.client-container {
+  padding: 2px 16px;
+}
 
 
 
